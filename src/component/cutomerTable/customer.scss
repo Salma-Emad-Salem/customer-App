@@ -1,0 +1,93 @@
+@import "../../styles/responsive.scss";
+.customer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding-block: 50px;
+    gap: 10px;
+
+    @include md{
+        padding-top: 20px;
+    }
+
+    h2{
+        margin-top: 20px;
+    }
+
+    .inputs{
+        display: flex;
+        gap: 20px;
+        input{
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #EECEB9;
+            margin-bottom: 10px;
+      
+            &:focus{
+              outline: none;
+              border: 1px solid #000;
+              box-shadow: 0 0 5px #EECEB9;
+              transition: 0.3s;
+      
+              &::placeholder{
+                color: #EECEB9;
+                transition: 0.3s;
+              }
+            }
+          }
+    }
+
+
+    table{
+        max-width:100%;
+        border-collapse: collapse;
+        background-color: #BB9AB1;
+        @include md{
+            width: 80%;
+
+        }
+        @include sm{
+            font-size: 14px;
+        }
+
+        th,td{
+            border: 1px solid #272525;
+            padding: 10px;
+            text-align: left;
+
+            &:first-child{
+                text-align: center;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: #EECEB9;
+                    transition: 0.3s;
+                }
+
+                &.active{
+                    background-color: #EECEB9;
+                    transition: 0.3s;
+                    color: #000;
+
+                    &:hover{
+                        cursor: default;
+                        background-color: #EECEB9;
+                        transition: 0.3s;
+                    }
+                
+                }
+
+            }
+            
+        }
+
+        
+    }
+
+
+    
+}
